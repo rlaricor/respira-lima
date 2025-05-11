@@ -6,16 +6,16 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f9f9;
       margin: 0;
       padding: 0;
-      background-color: #f4f9f9;
       color: #333;
     }
 
     header {
       background-color: #3b8d99;
       color: white;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
     }
 
@@ -38,15 +38,64 @@
       margin: auto;
     }
 
-    h1, h2 {
+    h2 {
       color: #2c3e50;
+      margin-bottom: 20px;
     }
 
-    .modulo {
-      background-color: #ffffff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-bottom: 20px;
+    /* Slider */
+    #slider {
+      width: 100%;
+      max-width: 960px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Multimedia */
+    .multimedia-row {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .multimedia-col {
+      flex: 1;
+    }
+
+    .multimedia-col img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* Testimonios */
+    #testimonios {
+      background-color: #e9f5f5;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .testimonial {
+      font-style: italic;
+      font-size: 18px;
+      display: none;
     }
 
     footer {
@@ -54,22 +103,7 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
-    }
-
-    .quote {
-      font-style: italic;
-      margin-top: 10px;
-    }
-
-    .insignia {
-      font-size: 18px;
-      padding: 5px;
-      display: inline-block;
-    }
-
-    ul {
-      margin-left: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -85,93 +119,87 @@
     <a href="#simulador">Simulador</a>
     <a href="#historias">Historias</a>
     <a href="#retos">Retos</a>
-    <a href="#reconocimientos">Reconocimientos</a>
-    <a href="#docentes">Zona Docente</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#docentes">Docentes</a>
   </nav>
+
+  <!-- Slider Principal -->
+  <div id="slider">
+    <div class="slide" style="display: block;"><img src="https://via.placeholder.com/960x400?text=Contaminación+en+Lima" alt="Slide 1"></div>
+    <div class="slide"><img src="https://via.placeholder.com/960x400?text=Educación+Ambiental" alt="Slide 2"></div>
+    <div class="slide"><img src="https://via.placeholder.com/960x400?text=Jóvenes+por+el+Clima" alt="Slide 3"></div>
+  </div>
 
   <section id="modulos">
     <h2>Módulos Educativos</h2>
-    
-    <div class="modulo">
-      <h3>¿Qué es el monóxido de carbono?</h3>
-      <p>El monóxido de carbono (CO) es un gas invisible, inodoro y muy tóxico. Se produce por la combustión incompleta de materiales como gasolina, madera, carbón y gas.</p>
-    </div>
-
-    <div class="modulo">
-      <h3>Efectos en la salud y el ambiente</h3>
-      <ul>
-        <li><strong>Salud:</strong> Dolor de cabeza, mareos, desmayos e incluso la muerte por exposición prolongada.</li>
-        <li><strong>Ambiente:</strong> Afecta la fotosíntesis y contribuye al cambio climático.</li>
-      </ul>
-    </div>
-
-    <div class="modulo">
-      <h3>¿Qué está pasando en Lima?</h3>
-      <ul>
-        <li>Mal parque automotor.</li>
-        <li>Quema de residuos urbanos.</li>
-        <li>Poca conciencia sobre reciclaje y movilidad sostenible.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="simulador">
-    <h2>Simulador Virtual</h2>
-    <p>Explora cómo tus decisiones cotidianas afectan el aire que respiras.</p>
     <ul>
-      <li>Escoge tu transporte: bicicleta, auto, bus o caminar.</li>
-      <li>Decide si reciclas o quemas residuos.</li>
-      <li>Participa o no en campañas ambientales.</li>
-      <li><em>Resultado:</em> Verás el impacto en el cielo, la salud y los árboles.</li>
+      <li>¿Qué es el monóxido de carbono?</li>
+      <li>Impacto en la salud y el ambiente.</li>
+      <li>Situación actual de Lima Metropolitana.</li>
     </ul>
   </section>
 
-  <section id="historias">
-    <h2>Historias Locales</h2>
-
-    <div class="modulo">
-      <h3>“El taxi de don Jorge”</h3>
-      <p>Jorge es taxista en Lima. Tras una charla en su barrio, decidió convertir su auto a gas natural. Ahora es parte de una campaña por el aire limpio.</p>
-    </div>
-
-    <div class="modulo">
-      <h3>“La lucha en San Juan de Lurigancho”</h3>
-      <p>Vecinos formaron patrullas verdes y plantaron 300 árboles cerca de una escuela para reducir la contaminación por quema de residuos.</p>
+  <section id="multimedia">
+    <h2>Conoce más en imágenes</h2>
+    <div class="multimedia-row">
+      <div class="multimedia-col">
+        <img src="https://via.placeholder.com/300x200?text=Movilidad+Sostenible" alt="Movilidad">
+        <p>Usar bicicletas y transporte público reduce las emisiones.</p>
+      </div>
+      <div class="multimedia-col">
+        <img src="https://via.placeholder.com/300x200?text=Reforestación" alt="Reforestación">
+        <p>Plantar árboles mejora la calidad del aire.</p>
+      </div>
+      <div class="multimedia-col">
+        <img src="https://via.placeholder.com/300x200?text=Reciclaje" alt="Reciclaje">
+        <p>La correcta gestión de residuos evita la quema y la contaminación.</p>
+      </div>
     </div>
   </section>
 
-  <section id="retos">
-    <h2>Retos Semanales</h2>
-    <ul>
-      <li><strong>Día sin auto:</strong> Usa transporte público, bicicleta o camina.</li>
-      <li><strong>Árboles para el futuro:</strong> Planta un árbol y súbelo con el hashtag <code>#RespiraLima</code>.</li>
-      <li><strong>Mapa de focos contaminantes:</strong> Registra con tu celular lugares con quema de basura o talleres contaminantes.</li>
-    </ul>
-  </section>
-
-  <section id="reconocimientos">
-    <h2>Reconocimientos</h2>
-    <p>Participa y gana insignias digitales:</p>
-    <div class="insignia">🌱 Conciencia Verde</div>
-    <div class="insignia">🚲 Movilidad Sostenible</div>
-    <div class="insignia">📸 Vigilante Ambiental</div>
-    <p>Los colegios con más puntos serán reconocidos públicamente.</p>
+  <section id="testimonios">
+    <h2>Testimonios</h2>
+    <p class="testimonial" style="display: block;">"Mi hijo sufrió asma por el aire contaminado. Gracias a este proyecto entendimos cómo ayudar desde casa." – Rosa, madre de familia</p>
+    <p class="testimonial">"Nuestra comunidad logró reducir la quema de basura. Hoy respiramos mejor." – Pedro, vecino de Villa El Salvador</p>
+    <p class="testimonial">"Este programa me inspiró a usar mi bicicleta todos los días." – Carla, estudiante de secundaria</p>
   </section>
 
   <section id="docentes">
     <h2>Zona Docente</h2>
+    <p>Material pedagógico, fichas y recursos alineados al currículo nacional.</p>
     <ul>
-      <li>Guías por nivel educativo.</li>
-      <li>Sesiones alineadas al currículo nacional.</li>
-      <li>Fichas de trabajo por módulo.</li>
-      <li>Material audiovisual complementario.</li>
+      <li>Sesiones por nivel.</li>
+      <li>Videos educativos.</li>
+      <li>Actividades prácticas para el aula.</li>
     </ul>
   </section>
 
   <footer>
     <p>“No heredamos la Tierra de nuestros antepasados, la tomamos prestada de nuestros hijos.”</p>
-    <p class="quote">“Respirar aire limpio no debería ser un privilegio, sino un derecho.”</p>
+    <p>“Respirar aire limpio no debería ser un privilegio, sino un derecho.”</p>
   </footer>
+
+  <script>
+    // Slider de imágenes
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    setInterval(() => {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].style.display = "block";
+    }, 4000);
+
+    // Rotación de testimonios
+    let currentTestimonial = 0;
+    const testimonios = document.querySelectorAll(".testimonial");
+
+    setInterval(() => {
+      testimonios[currentTestimonial].style.display = "none";
+      currentTestimonial = (currentTestimonial + 1) % testimonios.length;
+      testimonios[currentTestimonial].style.display = "block";
+    }, 6000);
+  </script>
 
 </body>
 </html>
